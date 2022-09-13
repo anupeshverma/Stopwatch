@@ -17,6 +17,7 @@ stop.style.pointerEvents = "none";
 reset.style.pointerEvents = "none";
 
 start.addEventListener("click", function () {
+    clearInterval(interval);
     interval = setInterval(start_timer, 10);
     start.style.pointerEvents = "none";
     stop.style.pointerEvents = "visible";
@@ -31,14 +32,14 @@ stop.addEventListener("click", function () {
 
 reset.addEventListener("click", function () {
     clearInterval(interval);
-    hour = "00 :";
-    min = "00 :";
-    sec = "00 :";
-    ten = "00";
-    hours.innerHTML = hour;
-    mins.innerHTML = min;
-    secs.innerHTML = sec;
-    tens.innerHTML = ten;
+    hour = 00;
+    min = 00;
+    sec = 00;
+    ten = 00;
+    hours.innerHTML = hour+"0 :";
+    mins.innerHTML = min+"0 :";
+    secs.innerHTML = sec+"0 :";
+    tens.innerHTML = ten+"0";
     start.style.pointerEvents = "visible";
     reset.style.pointerEvents = "none";
 });
