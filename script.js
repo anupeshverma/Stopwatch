@@ -37,11 +37,13 @@ start.addEventListener("click", function(){
         }
     }, 1000);
     start.style.pointerEvents = "none";
+    stop.style.pointerEvents = "visible";
 });
 
 stop.addEventListener("click", function(){
     clearInterval(interval);
     start.style.pointerEvents = "visible";
+    stop.style.pointerEvents="none";
 });
 
 reset.addEventListener("click", function(){
