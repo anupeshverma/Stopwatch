@@ -42,6 +42,7 @@ reset.addEventListener("click", function () {
     tens.innerHTML = ten+"0";
     start.style.pointerEvents = "visible";
     reset.style.pointerEvents = "none";
+    stop.style.pointerEvents = "none";
 });
 
 function start_timer() {
