@@ -20,10 +20,10 @@ body{
 
 @keyframes shine{
     0%,100%{
-        box-shadow: 0px 0px 25px -12px rgb(255, 208, 0);
+        box-shadow: 0px 0px 30px -12px rgb(255, 208, 0);
     }
     50%{
-        box-shadow: 0px 0px 25px 3px rgba(255, 209, 2, 0.5);
+        box-shadow: 0px 0px 30px 3px rgba(255, 209, 2, 0.5);
     }
 }
 .inner{
@@ -47,26 +47,24 @@ body{
     display: flex;
     justify-content: space-between;
     width:250px;
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 button{
     width: 60px;
-    height: 60px;
+    height: 60px; 
     border-radius: 50%;
-    border: 2px solid black;
+    border: 1px solid white;
     background-color: #040338;
     color: rgb(237, 10, 10);
     font-size: 18px;
     font-weight: bold;
-    animation: shine;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-
 }
 
 button:hover{
-    background-color: white;
-    color: black;
+    background-color: rgb(17, 2, 83);
+    color: whitesmoke;
     cursor:pointer;
+    box-shadow: 0px 0px 40px -8px #F6B400;
+ 
 }
