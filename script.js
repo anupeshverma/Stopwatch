@@ -1,6 +1,7 @@
 let start = document.querySelector(".start");
 let stop = document.querySelector(".stop");
 let reset = document.querySelector(".reset");
+
 let hours = document.querySelector(".hour");
 let mins = document.querySelector(".min");
 let secs = document.querySelector(".sec");
@@ -28,6 +29,7 @@ stop.addEventListener("click", function () {
     clearInterval(interval);
     start.style.pointerEvents = "visible";
     stop.style.pointerEvents = "none";
+    
 });
 
 reset.addEventListener("click", function () {
@@ -73,3 +75,28 @@ function start_timer() {
         }
     }
 }
+
+// Function for laps
+let lap = document.querySelector(".lap");
+let clear_lap = document.querySelector(".clear_lap");
+
+let lap_output = document.querySelector(".lap_output");
+let lap_count = 1;
+
+lap.addEventListener("click", function() {
+    let h = hour < 10 ? "0" + hour + " :" : hour + " :";
+    let m = min < 10 ? " 0" + min + " :" : min + " :";
+    let s = sec < 10 ? " 0" + sec + " :" : sec + " :";
+    let t = ten < 10 ? "0" + ten : ten;
+
+    let lap_now = "Lap "+lap_count+"- &nbsp;"+h+m+s+t+"<br/>";
+    let laps = lap_output.innerHTML + lap_now; 
+    lap_output.innerHTML = laps;
+    lap_output.scrollIntoView();
+    lap_count++;
+})
+
+clear_lap.addEventListener("click", function() {
+    lap_output.innerHTML = " ";
+    lap_count = 1;
+})
